@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import defaultImage from './default.jpg';
 
 //4 перенесли наш компонент з загального файла
@@ -43,6 +44,16 @@ const Painting = ({
       <button type="button">Add to cart</button>
     </div>
   );
+};
+
+//Опис компонентів через PropTypes
+
+Painting.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+  profileUrl: PropTypes.string,
+  authorName: PropTypes.string,
+  price: PropTypes.number,
 };
 
 export default Painting;
