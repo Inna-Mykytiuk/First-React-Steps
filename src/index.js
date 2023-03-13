@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { App } from 'components/App';
+// import paintings from './painting.json';
+import { App } from 'components/App';
 import './index.css';
 
 //створення нового елементу
@@ -42,31 +43,65 @@ import './index.css';
 //   </React.StrictMode>
 // );
 
-const data = {
-  id: 'id-1',
-  url: 'https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg',
-  title: 'Feathers',
-  price: 500,
-  author: {
-    tag: 'ractapopulous',
-    url: 'https://pixabay.com/users/ractapopulous-24766/',
-  },
-  quantity: 10,
-};
+// const data = {
+//   id: 'id-1',
+//   url: 'https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg',
+//   title: 'Feathers',
+//   price: 500,
+//   author: {
+//     tag: 'ractapopulous',
+//     url: 'https://pixabay.com/users/ractapopulous-24766/',
+//   },
+//   quantity: 10,
+// };
+
+// const data = paintings[0];
+
+//розмітка 3
+// function Painting(props) {
+//   return (
+//     <div>
+//       <img src={data.url} alt={data.title} width="480" />
+//       <h2>{data.title}</h2>
+//       <p>
+//         Author: <a href={data.author.url}>{data.author.tag}</a>
+//       </p>
+//       <p>Credits: {data.price} price</p>
+//       <p>Accessibility: available or unavailable</p>
+//       <button type="button">Add to cart</button>
+//     </div>
+//   );
+// }
 
 //розмітка
-const painting = (
-  <div>
-    <img src={data.url} alt={data.title} width="480" />
-    <h2>{data.title}</h2>
-    <p>
-      Author: <a href={data.author.url}>{data.author.tag}</a>
-    </p>
-    <p>Credits: {data.price} price</p>
-    <p>Accessibility: available or unavailable</p>
-    <button type="button">Add to cart</button>
-  </div>
-);
+// const painting = (
+//   <div>
+//     <img src={data.url} alt={data.title} width="480" />
+//     <h2>{data.title}</h2>
+//     <p>
+//       Author: <a href={data.author.url}>{data.author.tag}</a>
+//     </p>
+//     <p>Credits: {data.price} price</p>
+//     <p>Accessibility: available or unavailable</p>
+//     <button type="button">Add to cart</button>
+//   </div>
+// );
 
 //ренднр елементів на сторінку
-ReactDOM.createRoot(document.getElementById('root')).render(painting);
+// ReactDOM.createRoot(document.getElementById('root')).render(<Painting />);
+
+// const painting = paintings[0];
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <Painting
+//     url={painting.url}
+//     alt={painting.title}
+//     authorName={painting.author.tag}
+//     profileUrl={painting.author.url}
+//     price={painting.price}
+//   />
+// );
+
+//5
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
