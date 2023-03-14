@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/First-React-Steps/static/css/main.7acaea2f.css",
-    "main.js": "/First-React-Steps/static/js/main.5f3d247a.js",
+    "main.js": "/First-React-Steps/static/js/main.ea5b12f8.js",
     "static/media/default.jpg": "/First-React-Steps/static/media/default.1e70951c7e5df0e91a80.jpg",
     "index.html": "/First-React-Steps/index.html",
     "main.7acaea2f.css.map": "/First-React-Steps/static/css/main.7acaea2f.css.map",
-    "main.5f3d247a.js.map": "/First-React-Steps/static/js/main.5f3d247a.js.map"
+    "main.ea5b12f8.js.map": "/First-React-Steps/static/js/main.ea5b12f8.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.5f3d247a.js"
+    "static/js/main.ea5b12f8.js"
   ]
 }
