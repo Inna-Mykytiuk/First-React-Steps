@@ -73,34 +73,8 @@ import './index.css';
 //   );
 // }
 
-//розмітка
-// const painting = (
-//   <div>
-//     <img src={data.url} alt={data.title} width="480" />
-//     <h2>{data.title}</h2>
-//     <p>
-//       Author: <a href={data.author.url}>{data.author.tag}</a>
-//     </p>
-//     <p>Credits: {data.price} price</p>
-//     <p>Accessibility: available or unavailable</p>
-//     <button type="button">Add to cart</button>
-//   </div>
-// );
-
 //ренднр елементів на сторінку
 // ReactDOM.createRoot(document.getElementById('root')).render(<Painting />);
-
-// const painting = paintings[0];
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <Painting
-//     url={painting.url}
-//     alt={painting.title}
-//     authorName={painting.author.tag}
-//     profileUrl={painting.author.url}
-//     price={painting.price}
-//   />
-// );
 
 //5
 
