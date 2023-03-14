@@ -2,6 +2,7 @@
 import PaitingList from './PaitingList';
 //переносимо розмітку масиву даних туди де буде вставлятися розмітка
 import paintings from '../painting.json';
+import Section from './Section';
 
 //поелементний рендер
 // export const App = () => {
@@ -48,13 +49,20 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        // justifyContent: 'center',
+        flexWrap: 'wrap',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        listStyle: 'none',
       }}
     >
+      {/* <PaitingList items={paintings} /> */}
+      <Section title="Top of the week" />
       <PaitingList items={paintings} />
+      <Section />
+      <Section />
     </div>
   );
 };
