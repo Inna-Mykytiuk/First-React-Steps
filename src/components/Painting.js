@@ -31,6 +31,7 @@ const Painting = ({
   profileUrl,
   authorName,
   price,
+  quantity,
 }) => {
   return (
     <div>
@@ -40,7 +41,7 @@ const Painting = ({
         Author: <a href={profileUrl}>{authorName}</a>
       </p>
       <p>Credits: {price} credits</p>
-      <p>Accessibility: yes or not</p>
+      <p>Accessibility: {quantity < 10 ? 'Ends' : 'In stock'}</p>
       <button type="button">Add to cart</button>
     </div>
   );
@@ -54,6 +55,7 @@ Painting.propTypes = {
   profileUrl: PropTypes.string,
   authorName: PropTypes.string,
   price: PropTypes.number,
+  quantity: PropTypes.number,
 };
 
 export default Painting;
