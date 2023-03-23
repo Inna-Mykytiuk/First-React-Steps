@@ -59,10 +59,9 @@ export const App = () => {
       }}
     >
       {/* <PaitingList items={paintings} /> */}
-      <Section title="Top of the week" />
+      {/* <Section title="Top of the week" />
       <PaitingList items={paintings} />
-      <Section />
-      <Section />
+      <Section /> */}
     </div>
   );
 };
