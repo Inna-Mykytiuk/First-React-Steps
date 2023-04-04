@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Recipe } from './Recipe';
 
 export const RecipeList = ({ items }) => {
@@ -10,4 +11,12 @@ export const RecipeList = ({ items }) => {
       ))}
     </ul>
   );
+};
+
+RecipeList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
