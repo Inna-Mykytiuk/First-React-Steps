@@ -1,8 +1,11 @@
 //Для того щоб вставити розмітку імпортуємо елементи
-import PaitingList from './PaitingList';
+// import PaitingList from './PaitingList';
 //переносимо розмітку масиву даних туди де буде вставлятися розмітка
-import paintings from '../painting.json';
-import Section from './Section';
+// import paintings from '../painting.json';
+// import Section from './Section';
+
+import { RecipeList } from './RecipeList';
+import recipes from '../recipes.json';
 
 //поелементний рендер
 // export const App = () => {
@@ -43,25 +46,32 @@ import Section from './Section';
 
 //рендер колекції
 
+// export const App = () => {
+//   return (
+//     <div
+//       style={{
+//         height: '100vh',
+//         display: 'flex',
+//         flexDirection: 'column',
+//         // justifyContent: 'center',
+//         flexWrap: 'wrap',
+//         alignItems: 'center',
+//         fontSize: 40,
+//         color: '#010101',
+//         listStyle: 'none',
+//       }}
+//     >
+//       {/* <PaitingList items={paintings} /> */}
+//       {/* <Section title="Top of the week" />
+//       <PaitingList items={paintings} />
+//       <Section /> */}
+//     </div>
+//   );
+// };
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        // justifyContent: 'center',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        listStyle: 'none',
-      }}
-    >
-      {/* <PaitingList items={paintings} /> */}
-      {/* <Section title="Top of the week" />
-      <PaitingList items={paintings} />
-      <Section /> */}
+    <div>
+      <RecipeList items={recipes} />
     </div>
   );
 };
