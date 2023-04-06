@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import paintings from './painting.json';
 import { App } from 'components/App';
-import './index.css';
+// import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
