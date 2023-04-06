@@ -9,9 +9,13 @@ export const List = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  li:hover {
+    scale: 1.01;
+  }
 `;
 
 export const ListItem = styled.li`
   width: 320px;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* flex-grow: 1; */
 `;
