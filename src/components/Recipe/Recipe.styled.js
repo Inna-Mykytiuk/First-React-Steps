@@ -85,6 +85,9 @@ export const Badge = styled.span`
   color: ${props => {
     return props.isActive ? '#fff' : '#000';
   }};
+  text-transform: ${props => {
+    return props.isActive ? 'uppercase' : 'none';
+  }};
 `;
 
 export const RecipeTitle = styled.h2`
