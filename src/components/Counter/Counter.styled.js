@@ -59,4 +59,7 @@ export const Button = styled.button`
     background-color: orange;
     color: #000;
   }
+  &:active {
+    scale: 0.95;
+  }
 `;

@@ -7,23 +7,25 @@ export class Counter extends Component {
     initialValue: 0,
   };
 
+  // зазначаємо типи пропсів
   static propTypes = {
     initialValue: PropTypes.number,
   };
 
+  //задаємо початкове значення стейту(стану)
   state = {
     value: this.props.initialValue,
   };
 
   //функція збільшення значення на 1 при кліку на кнопку +
-  handleIncrement = evt => {
-    // console.log('Increment button was clicked!', evt); // працює
+  handleIncrement = () => {
+    // console.log('Increment button was clicked!'); // працює
     this.setState(prevState => ({ value: prevState.value + 1 }));
   };
 
   //функція збільшення значення на 1 при кліку на кнопку -
-  handleDecrement = evt => {
-    // console.log('Decrement button was clicked!', evt); // працює
+  handleDecrement = () => {
+    // console.log('Decrement button was clicked!'); // працює
     this.setState(prevState => ({ value: prevState.value - 1 }));
   };
 
