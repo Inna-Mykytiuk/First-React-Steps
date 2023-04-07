@@ -112,4 +112,38 @@ export const Actions = styled.div`
   gap: 8px;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: orange;
+      color: #000;
+    }
+
+    &:active {
+      scale: 0.95;
+    }
+
+    svg {
+      color: #000;
+      width: 20px;
+      height: 20px;
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    svg:hover {
+      color: #fff;
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;

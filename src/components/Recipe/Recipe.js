@@ -68,6 +68,7 @@ export class Recipe extends Component {
           </RecipeDifficulties>
 
           <Actions>
+            {/* Ця кнопка відповідає за видалення елементу за ідентифікатором id, сам стейт з функцією розташований у App, а сюди передається пропрос-колбеком */}
             <button
               type="button"
               onClick={() => onDelete(id)}
@@ -75,12 +76,15 @@ export class Recipe extends Component {
             >
               <HiTrash />
             </button>
+
+            {/* Ця кнопка відкриває модальне вікно і приводить isOpen до true*/}
             <button type="button" onClick={this.openModal} aria-label="Zoom">
               <HiZoomIn />
             </button>
           </Actions>
         </Meta>
 
+        {/* Якщо стан isOpen буде true тоді зарендериться розмітка модального вікна і з'явиться кнопка Close після натискання на яку значення isOpen буде приведено до false, відповідно розмітка зникне*/}
         {this.state.isOpen && (
           <Modal
             image={image}

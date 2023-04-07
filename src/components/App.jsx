@@ -6,37 +6,23 @@ import { Counter } from './Counter/Counter';
 import { Component } from 'react';
 
 export class App extends Component {
+  //початковий стан. дані із файла json, наш масив об'єктів, який ми будемо змінювати
   state = {
     recipes: InitialRecipes,
     // selectedImg: null,
   };
 
-  //створюємо метод видалення рецепту
+  //створюємо метод видалення рецепту за id(бо він є унікальним)
   deleteRecipe = id => {
     this.setState(prevState => ({
       recipes: prevState.recipes.filter(recipe => recipe.id !== id),
     }));
   };
 
-  //функція для вибору картинки
-  // selectImg = imageUrl => {
-  //   this.setState({ selectedImg: imageUrl });
-  // };
-
   render() {
     return (
       <Layout>
-        {/* {this.state.selectedImg && (
-          <div>
-            <h2>Modal</h2>
-            <img src={this.state.selectedImg} alt="selected" width="320" />
-          </div>
-        )} */}
-        <RecipeList
-          items={this.state.recipes}
-          onDelete={this.deleteRecipe}
-          // onSelect={this.selectImg}
-        />
+        <RecipeList items={this.state.recipes} onDelete={this.deleteRecipe} />
         <GlobalStyle />
         <Counter />
       </Layout>

@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
       <header>
         <section>
           <Container>
-            <HeaderTitle>Header</HeaderTitle>
+            <HeaderTitle>React tasks</HeaderTitle>
           </Container>
         </section>
       </header>
