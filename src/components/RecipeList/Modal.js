@@ -22,11 +22,7 @@ export const Modal = ({ onClose, image, isOpen }) => {
         Close
       </button> */}
 
-      <ReactModal
-        isOpen={isOpen}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
+      <ReactModal isOpen={isOpen} style={customStyles}>
         <h2>Modal</h2>
         <img src={image} alt="selected" width="320" />
         <button type="button" onClick={onClose}>
