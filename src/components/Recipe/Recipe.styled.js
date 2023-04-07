@@ -96,3 +96,20 @@ export const RecipeTitle = styled.h2`
 export const DifficultiesTitle = styled.h3`
   text-align: center;
 `;
+
+export const Meta = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
