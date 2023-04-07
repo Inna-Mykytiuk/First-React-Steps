@@ -19,10 +19,12 @@ import {
 import { Component } from 'react';
 
 export class Recipe extends Component {
+  //початковий стан для модального вікна, модальне вікно скрите
   state = {
     isOpen: false,
   };
 
+  //створюємо методи для відкриття і закриття модального вікна
   openModal = () => this.setState({ isOpen: true });
   closeModal = () => this.setState({ isOpen: false });
 
@@ -52,6 +54,7 @@ export class Recipe extends Component {
               {calories} calories
             </InfoItem>
           </RecipeInfo>
+
           <RecipeDifficulties>
             <DifficultiesTitle>Difficulties</DifficultiesTitle>
             <BadgeList>
