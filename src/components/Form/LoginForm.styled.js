@@ -42,12 +42,11 @@ export const FormWrapper = styled.div`
   form {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
     input {
-      /* width: 100%; */
+      width: 100%;
       padding: 10px;
       margin-bottom: 10px;
       border: none;

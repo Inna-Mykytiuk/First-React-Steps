@@ -60,16 +60,22 @@ export const FormWrapper = styled.div`
     }
     label {
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
     }
   }
 `;
+
 export const InputWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column;
-  align-items: flex-start; */
+  justify-content: center;
+  width: 100%;
+`;
+
+export const PasswordWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 `;

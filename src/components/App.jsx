@@ -6,6 +6,7 @@ import { Counter } from './Counter/Counter';
 import { Component } from 'react';
 import { LoginForm } from './Form/LoginForm';
 import { SignUpForm } from './Form/RegistrationForm';
+import { RecipeForm } from './RecipeForm/RecipeForm';
 // import { Modal } from './RecipeList/Modal';
 
 export class App extends Component {
@@ -26,6 +27,7 @@ export class App extends Component {
     return (
       <Layout>
         <RecipeList items={this.state.recipes} onDelete={this.deleteRecipe} />
+        <RecipeForm />
         <GlobalStyle />
         <Counter />
         <LoginForm />

@@ -1,5 +1,10 @@
 import { Component } from 'react';
-import { FormWrapper, InputWrapper } from './RegistrationForm.styled';
+import PropTypes from 'prop-types';
+import {
+  FormWrapper,
+  InputWrapper,
+  PasswordWrapper,
+} from './RegistrationForm.styled';
 
 const INITIAL_STATE = {
   login: '',
@@ -16,18 +21,6 @@ export class SignUpForm extends Component {
     const { name, value } = evt.target;
     this.setState({ [name]: value });
   };
-
-  // handleSubmit = evt => {
-  //   evt.preventDefault();
-  //   const { login, email, password } = this.state;
-  //   console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
-  //   // this.props.onSubmit({ ...this.state });
-  //   this.reset();
-  // };
-
-  // reset = () => {
-  //   this.setState({ ...INITIAL_STATE });
-  // };
 
   handleSubmit = evt => {
     evt.preventDefault();
@@ -75,17 +68,18 @@ export class SignUpForm extends Component {
                 />
               </label>
             </InputWrapper>
-            <label>
-              Password
-              <input
-                type="password"
-                placeholder="Enter password"
-                name="password"
-                value={password}
-                onChange={this.handleChange}
-              />
-            </label>
-
+            <PasswordWrapper>
+              <label>
+                Password
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  name="password"
+                  value={password}
+                  onChange={this.handleChange}
+                />
+              </label>
+            </PasswordWrapper>
             <button type="submit">Sign up as {login}</button>
           </form>
         </FormWrapper>
@@ -93,3 +87,7 @@ export class SignUpForm extends Component {
     );
   }
 }
+
+SignUpForm.propTypes = {
+  onSubmit: PropTypes.func,
+};
