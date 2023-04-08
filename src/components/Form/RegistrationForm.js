@@ -1,14 +1,18 @@
 import { Component } from 'react';
 import { FormWrapper } from './RegistrationForm.styled';
 
-const INITIAL_STATE = {
-  login: '',
-  email: '',
-  password: '',
-};
+// const INITIAL_STATE = {
+//   login: '',
+//   email: '',
+//   password: '',
+// };
 
 export class SignUpForm extends Component {
-  state = { ...INITIAL_STATE };
+  state = {
+    login: '',
+    email: '',
+    password: '',
+  };
 
   // Для всіх інпутів створюємо один обробник
   // Розрізняти інпути будемо за атрибутом name
@@ -25,9 +29,9 @@ export class SignUpForm extends Component {
     this.reset();
   };
 
-  reset = () => {
-    this.setState({ ...INITIAL_STATE });
-  };
+  // reset = () => {
+  //   this.setState({ ...INITIAL_STATE });
+  // };
 
   render() {
     const { login, email, password } = this.state;
