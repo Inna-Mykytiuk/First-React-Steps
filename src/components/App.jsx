@@ -4,6 +4,8 @@ import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout/Layout';
 import { Counter } from './Counter/Counter';
 import { Component } from 'react';
+import { LoginForm } from './Form/LoginForm';
+// import { Modal } from './RecipeList/Modal';
 
 export class App extends Component {
   //початковий стан. дані із файла json, наш масив об'єктів, який ми будемо змінювати
@@ -25,6 +27,7 @@ export class App extends Component {
         <RecipeList items={this.state.recipes} onDelete={this.deleteRecipe} />
         <GlobalStyle />
         <Counter />
+        <LoginForm />
       </Layout>
     );
   }

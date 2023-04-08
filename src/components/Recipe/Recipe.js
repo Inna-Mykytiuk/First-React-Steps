@@ -3,6 +3,7 @@ import { BsAlarm } from 'react-icons/bs';
 import { AiOutlinePieChart } from 'react-icons/ai';
 import { HiOutlineChartBar, HiTrash, HiZoomIn } from 'react-icons/hi';
 import { Modal } from '../RecipeList/Modal';
+import { Component } from 'react';
 import {
   Container,
   Image,
@@ -16,7 +17,6 @@ import {
   Meta,
   Actions,
 } from './Recipe.styled';
-import { Component } from 'react';
 
 export class Recipe extends Component {
   //початковий стан для модального вікна, модальне вікно скрите
