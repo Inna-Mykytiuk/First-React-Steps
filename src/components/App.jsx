@@ -23,11 +23,17 @@ export class App extends Component {
     }));
   };
 
+  addRecipe = newRecipe => {
+    this.setState(prevState => ({
+      recipes: [...prevState.recipes, newRecipe],
+    }));
+  };
+
   render() {
     return (
       <Layout>
         <RecipeList items={this.state.recipes} onDelete={this.deleteRecipe} />
-        <RecipeForm />
+        <RecipeForm onSubmit={this.addRecipe} />
         <GlobalStyle />
         <Counter />
         <LoginForm />

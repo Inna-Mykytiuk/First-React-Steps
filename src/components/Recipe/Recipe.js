@@ -105,10 +105,10 @@ Recipe.propTypes = {
   item: PropTypes.shape({
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired,
+    time: PropTypes.number.isRequired,
     servings: PropTypes.number.isRequired,
     calories: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     difficulty: PropTypes.oneOf(['easy', 'medium', 'hard']).isRequired,
   }).isRequired,
   onDelete: PropTypes.func.isRequired,
