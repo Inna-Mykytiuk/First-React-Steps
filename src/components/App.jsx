@@ -5,6 +5,7 @@ import { Layout } from './Layout/Layout';
 import { Counter } from './Counter/Counter';
 import { Component } from 'react';
 import { LoginForm } from './Form/LoginForm';
+import { SignUpForm } from './Form/RegistrationForm';
 // import { Modal } from './RecipeList/Modal';
 
 export class App extends Component {
@@ -28,6 +29,7 @@ export class App extends Component {
         <GlobalStyle />
         <Counter />
         <LoginForm />
+        <SignUpForm />
       </Layout>
     );
   }
