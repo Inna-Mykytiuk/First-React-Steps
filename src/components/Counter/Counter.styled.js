@@ -20,8 +20,10 @@ export const Wrapper = styled.div`
   width: 20%;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
+  background-color: #fff;
 
   height: 100%;
   padding: 20px;

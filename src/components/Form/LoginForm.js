@@ -13,19 +13,20 @@ export class LoginForm extends Component {
   };
   render() {
     return (
-      <FormWrapper>
-        <h3>Login Form</h3>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" name="login" placeholder="Enter your name" />
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-          />
-        </form>
-
-        <button type="submit">Login</button>
-      </FormWrapper>
+      <section>
+        <FormWrapper>
+          <h3>Login Form</h3>
+          <form onSubmit={this.handleSubmit}>
+            <input type="text" name="login" placeholder="Enter your name" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </form>
+          <button type="submit">Log in</button>
+        </FormWrapper>
+      </section>
     );
   }
 }
