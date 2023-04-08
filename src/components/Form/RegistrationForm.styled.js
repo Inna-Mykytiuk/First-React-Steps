@@ -50,6 +50,7 @@ export const FormWrapper = styled.div`
     justify-content: space-evenly;
     width: 100%;
     input {
+      width: 100%;
       padding: 10px;
       border: none;
       border-radius: 5px;
@@ -57,5 +58,18 @@ export const FormWrapper = styled.div`
 
       box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
     }
+    label {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
   }
+`;
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column;
+  align-items: flex-start; */
+  justify-content: center;
+  width: 100%;
 `;

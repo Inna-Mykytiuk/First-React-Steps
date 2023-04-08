@@ -1,18 +1,14 @@
 import { Component } from 'react';
-import { FormWrapper } from './RegistrationForm.styled';
+import { FormWrapper, InputWrapper } from './RegistrationForm.styled';
 
-// const INITIAL_STATE = {
-//   login: '',
-//   email: '',
-//   password: '',
-// };
+const INITIAL_STATE = {
+  login: '',
+  email: '',
+  password: '',
+};
 
 export class SignUpForm extends Component {
-  state = {
-    login: '',
-    email: '',
-    password: '',
-  };
+  state = { ...INITIAL_STATE };
 
   // Для всіх інпутів створюємо один обробник
   // Розрізняти інпути будемо за атрибутом name
@@ -21,17 +17,33 @@ export class SignUpForm extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = evt => {
-    evt.preventDefault();
-    const { login, email, password } = this.state;
-    console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
-    this.props.onSubmit({ ...this.state });
-    this.reset();
-  };
+  // handleSubmit = evt => {
+  //   evt.preventDefault();
+  //   const { login, email, password } = this.state;
+  //   console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
+  //   // this.props.onSubmit({ ...this.state });
+  //   this.reset();
+  // };
 
   // reset = () => {
   //   this.setState({ ...INITIAL_STATE });
   // };
+
+  handleSubmit = evt => {
+    evt.preventDefault();
+    const { login, email, password } = this.state;
+    console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
+
+    //якщо в пропсах є onSubmit(відправка форми, подія), то викликаємо його і передаємо в нього стейт(стани інпутів)
+    if (this.props.onSubmit) {
+      this.props.onSubmit({ ...this.state });
+    }
+    this.reset();
+  };
+
+  reset = () => {
+    this.setState({ ...INITIAL_STATE });
+  };
 
   render() {
     const { login, email, password } = this.state;
@@ -39,27 +51,30 @@ export class SignUpForm extends Component {
     return (
       <section>
         <FormWrapper>
+          <h3>Sign up Form</h3>
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Name
-              <input
-                type="text"
-                placeholder="Enter login"
-                name="login"
-                value={login}
-                onChange={this.handleChange}
-              />
-            </label>
-            <label>
-              Email
-              <input
-                type="email"
-                placeholder="Enter email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-              />
-            </label>
+            <InputWrapper>
+              <label>
+                Name
+                <input
+                  type="text"
+                  placeholder="Enter login"
+                  name="login"
+                  value={login}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  placeholder="Enter email"
+                  name="email"
+                  value={email}
+                  onChange={this.handleChange}
+                />
+              </label>
+            </InputWrapper>
             <label>
               Password
               <input
