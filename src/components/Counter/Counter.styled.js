@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,12 +12,11 @@ export const Container = styled.div`
   /* border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px; */
 
-  margin-top: 50px;
   padding: 30px;
 `;
 
 export const Wrapper = styled.div`
-  width: 20%;
+  width: 40%;
 
   display: flex;
   flex-wrap: wrap;
