@@ -3,6 +3,7 @@ import { getNews } from '../services/getNews';
 import { Loader } from '../Loader/Loader';
 import { NewsItem } from '../NewsItem/NewsItem';
 import { Error } from '../Error/Error';
+import { NewsListWrapper } from './NewsList.styled';
 export class NewsList extends Component {
   state = {
     news: null,
@@ -41,7 +42,11 @@ export class NewsList extends Component {
     }
 
     if (status === 'resolved') {
-      return <NewsItem news={news} />;
+      return (
+        <NewsListWrapper>
+          <NewsItem news={news} />
+        </NewsListWrapper>
+      );
     }
 
     // return (

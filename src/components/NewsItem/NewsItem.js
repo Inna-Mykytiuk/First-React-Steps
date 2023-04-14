@@ -1,11 +1,13 @@
+import { NewsItemCard, Image } from './NewsItem.styled';
+
 export const NewsItem = ({ news }) => {
   return news.articles.map(({ url, title, urlToImage, description }) => {
     return (
-      <div key={url}>
+      <NewsItemCard key={url}>
         <h2>{title}</h2>
-        <img src={urlToImage} alt={title} />
+        <Image src={urlToImage} alt={title} />
         <p>{description}</p>
-      </div>
+      </NewsItemCard>
     );
   });
 };

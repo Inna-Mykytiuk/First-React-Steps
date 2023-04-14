@@ -47,18 +47,6 @@ export const BadgeList = styled.div`
   margin-bottom: 20px;
 `;
 
-// export const Badge = styled.span`
-//   padding: 8px 16px;
-//   border: 1px solid #000;
-//   border-radius: 4px;
-//   background-color: ${props => {
-//     return props.isActive ? 'orange' : 'transparent';
-//   }};
-//   color: ${props => {
-//     return props.isActive ? '#fff' : '#000';
-//   }};
-// `;
-
 export const Badge = styled.span`
   padding: 8px 16px;
   align-items: center;
