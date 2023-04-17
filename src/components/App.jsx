@@ -9,8 +9,8 @@ import { SignUpForm } from './Form/RegistrationForm';
 import { RecipeForm } from './RecipeForm/RecipeForm';
 import { Clock } from './Clock/Clock';
 import { AppWrapper } from './App.styled';
-import { Search } from './Search/Search';
-import { NewsList } from './NewsList/NewsList';
+// import { Search } from './Search/Search';
+// import { NewsList } from './NewsList/NewsList';
 import { useState, useEffect } from 'react';
 
 const getInitialRecipes = () => {
@@ -24,7 +24,7 @@ const getInitialRecipes = () => {
 
 export const App = () => {
   const [recipes, setRecipes] = useState(getInitialRecipes());
-  const [textSearch, setTextSearch] = useState('');
+  // const [textSearch, setTextSearch] = useState('');
 
   useEffect(() => {
     localStorage.setItem('recipes', JSON.stringify(recipes));
@@ -34,9 +34,9 @@ export const App = () => {
   //   setTextSearch(prevState => [...prevState, searchText]);
   // };
 
-  const handleSubmit = searchText => {
-    setTextSearch(searchText);
-  };
+  // const handleSubmit = searchText => {
+  //   setTextSearch(searchText);
+  // };
 
   const deleteRecipe = id => {
     setRecipes(prevState => prevState.filter(recipe => recipe.id !== id));
@@ -54,8 +54,8 @@ export const App = () => {
           duration: 1500,
         }}
       />
-      <Search onSearch={handleSubmit} />
-      <NewsList searchText={textSearch} />
+      {/* <Search onSearch={handleSubmit} /> */}
+      {/* <NewsList searchText={textSearch} /> */}
       <RecipeList items={recipes} onDelete={deleteRecipe} />
       <RecipeForm onSubmit={addRecipe} />
 
