@@ -16,10 +16,32 @@ import { NewsList } from './NewsList/NewsList';
 export class App extends Component {
   //початковий стан. дані із файла json, наш масив об'єктів, який ми будемо змінювати
   state = {
-    recipes: InitialRecipes,
+    // recipes: InitialRecipes,
+    recipes: [],
     // selectedImg: null,
     textSearch: '',
   };
+
+  componentDidMount() {
+    const savedRecipes = localStorage.getItem('recipes');
+    if (savedRecipes !== null) {
+      const parsedRecipes = JSON.parse(savedRecipes);
+      this.setState({ recipes: parsedRecipes });
+      return;
+    }
+    this.setState({ recipes: InitialRecipes });
+
+    // const parsedRecipes = JSON.parse(recipes);
+    // if (parsedRecipes) {
+    //   this.setState({ recipes: parsedRecipes });
+    // }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.recipes !== this.state.recipes) {
+      localStorage.setItem('recipes', JSON.stringify(this.state.recipes));
+    }
+  }
 
   handleSubmit = textSearch => {
     this.setState({ textSearch });
@@ -37,8 +59,6 @@ export class App extends Component {
       recipes: [...prevState.recipes, newRecipe],
     }));
   };
-
-  componentDidMount() {}
 
   render() {
     return (
