@@ -39,3 +39,9 @@ export const FooterTitle = styled.h2`
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
     1px 1px 1px rgba(0, 0, 0, 0.5);
 `;
+
+export const Layout = styled.div`
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+`;

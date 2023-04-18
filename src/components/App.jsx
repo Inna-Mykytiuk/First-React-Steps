@@ -13,6 +13,11 @@ import { AppWrapper } from './App.styled';
 // import { NewsList } from './NewsList/NewsList';
 import { useState, useEffect } from 'react';
 import { Player } from './Player/Player';
+// import {
+//   Routes, // instead of "Switch"
+//   Route,
+// } from 'react-router-dom';
+// import { BreedSelect } from './BreedSelect/BreedSelect';
 
 const getInitialRecipes = () => {
   const savedRecipes = localStorage.getItem('recipes');
@@ -70,6 +75,9 @@ export const App = () => {
 
       <LoginForm />
       <SignUpForm />
+      {/* <Routes>
+        <Route exact path="/signup" element={<BreedSelect />} />
+      </Routes> */}
     </Layout>
   );
 };

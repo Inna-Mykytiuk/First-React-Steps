@@ -8,7 +8,7 @@ export const Player = ({ source }) => {
 
   return (
     <Container>
-      <h2>Videoplayer</h2>
+      <h2>Video player</h2>
       <video ref={playerRef} src={source}>
         Sorry, your browser does not support embedded videos.
       </video>
