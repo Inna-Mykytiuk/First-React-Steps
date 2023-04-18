@@ -17,7 +17,8 @@ export const GlobalStyle = createGlobalStyle`
   overflow-x: hidden;
   margin: 0 auto;
   transition: 1.5s;
-  background-color: #d9dae0;
+  background-color: #9eb7e5;
+
 }
 
 main {

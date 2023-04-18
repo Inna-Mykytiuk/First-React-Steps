@@ -18,9 +18,11 @@ export const Container = styled.div`
 export const HeaderTitle = styled.h1`
   font-size: 36px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   text-align: center;
   margin: 0;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
 `;
 
 export const Footer = styled.footer`
@@ -30,8 +32,10 @@ export const Footer = styled.footer`
 export const FooterTitle = styled.h2`
   font-size: 36px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   text-align: center;
   align-items: flex-end;
   margin: 0;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
 `;

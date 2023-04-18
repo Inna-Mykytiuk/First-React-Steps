@@ -12,6 +12,7 @@ import { AppWrapper } from './App.styled';
 // import { Search } from './Search/Search';
 // import { NewsList } from './NewsList/NewsList';
 import { useState, useEffect } from 'react';
+import { Player } from './Player/Player';
 
 const getInitialRecipes = () => {
   const savedRecipes = localStorage.getItem('recipes');
@@ -58,6 +59,9 @@ export const App = () => {
       {/* <NewsList searchText={textSearch} /> */}
       <RecipeList items={recipes} onDelete={deleteRecipe} />
       <RecipeForm onSubmit={addRecipe} />
+      <AppWrapper>
+        <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
+      </AppWrapper>
 
       <AppWrapper>
         <Counter />
